@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>myblogxoxo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Audio (metti i file in /assets) -->
+  <audio id="sfxClick" preload="auto" src="assets/click.mp3"></audio>
+  <audio id="sfxHover" preload="auto" src="assets/hover.mp3"></audio>
+
+  <header class="topbar">
+    <div class="logo">myblogxoxo ✧</div>
+    <nav class="nav">
+      <button class="navBtn" data-go="home">Home</button>
+      <button class="navBtn" data-go="music">Music</button>
+      <button class="navBtn" data-go="tv">TV Shows</button>
+      <button class="navBtn" data-go="pics">Pics</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <!-- HOME -->
+    <section id="home" class="panel active">
+      <div class="window">
+        <div class="windowBar">
+          <span>Welcome to my profile!!</span>
+          <div class="windowBtns">
+            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+          </div>
+        </div>
+
+        <div class="windowBody grid2">
+          <div class="card">
+            <h1>hi bestie ♡</h1>
+            <p class="small">
+              vibe: Y2K + disney + glitter + low quality pics ✧
+            </p>
+
+            <div class="ctaRow">
+              <button class="bigBtn sparkle" data-go="music">♪ go to music</button>
+              <button class="bigBtn sparkle" data-go="tv">☆ go to tv shows</button>
+            </div>
+
+            <div class="messageBox">
+              <strong>Message from webpage</strong>
+              <p>Remember, you are beautiful.</p>
+              <button class="miniBtn sparkle" id="popupBtn">OK</button>
+            </div>
+          </div>
+
+          <div class="card">
+            <h2>Latest updates</h2>
+            <ul class="list">
+              <li>✦ nuova playlist “2000s mood”</li>
+              <li>✦ slideshow disney/nickelodeon</li>
+              <li>✦ pics low quality dal pc</li>
+            </ul>
+
+            <div class="miniPlayer">
+              <div class="miniCover">✿</div>
+              <div>
+                <div class="small muted">now playing</div>
+                <div class="track">glitter fairy click</div>
+                <button class="miniBtn sparkle" id="playSfx">play sound</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="footerNote">made with love + glitter ✧</p>
+    </section>
+
+    <!-- MUSIC -->
+    <section id="music" class="panel">
+      <div class="window">
+        <div class="windowBar">
+          <span>Music — iPod mode</span>
+          <div class="windowBtns">
+            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+          </div>
+        </div>
+
+        <div class="windowBody">
+          <div class="ipod">
+            <div class="ipodScreen">
+              <div class="ipodHeader">album slider</div>
+
+              <div class="sliderWrap">
+                <button class="arrow sparkle" id="prev">‹</button>
+                <div class="coverFrame">
+                  <img id="coverImg" alt="Album cover" />
+                </div>
+                <button class="arrow sparkle" id="next">›</button>
+              </div>
+
+              <div class="ipodMeta">
+                <div class="title" id="albumTitle">—</div>
+                <div class="small muted" id="albumDesc">—</div>
+              </div>
+
+              <div class="songs">
+                <div class="small muted">fave songs</div>
+                <ol id="songList"></ol>
+              </div>
+            </div>
+
+            <div class="ipodWheel">
+              <button class="wheelBtn sparkle" data-go="home">MENU</button>
+              <button class="wheelBtn sparkle" id="random">RANDOM</button>
+              <button class="wheelBtn sparkle" data-go="pics">PICS</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TV SHOWS -->
+    <section id="tv" class="panel">
+      <div class="window">
+        <div class="windowBar">
+          <span>TV Shows — 2000s</span>
+          <div class="windowBtns">
+            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+          </div>
+        </div>
+
+        <div class="windowBody">
+          <div class="tvGrid" id="tvGrid">
+            <!-- Card TV generate via JS -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PICS -->
+    <section id="pics" class="panel">
+      <div class="window">
+        <div class="windowBar">
+          <span>Pics — low quality cam</span>
+          <div class="windowBtns">
+            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+          </div>
+        </div>
+
+        <div class="windowBody">
+          <p class="small">
+            Qui metti foto/video “dal pc” con luce brutta (aesthetic). Puoi fare una griglia o slideshow.
+          </p>
+
+          <div class="picsGrid">
+            <div class="picTile">+ add pic</div>
+            <div class="picTile">+ add pic</div>
+            <div class="picTile">+ add pic</div>
+            <div class="picTile">+ add pic</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="toast" class="toast" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
